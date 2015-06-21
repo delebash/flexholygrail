@@ -1,7 +1,12 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css");
+
 html, body {
     box-sizing: border-box;
     height: 100vh;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 *, *:before, *:after {
@@ -18,47 +23,141 @@ html, body {
     flex: 1;
     display: flex;
     flex-direction: row;
+    color: #333;
+    background: #333;
+
 }
 
 .content-wrapper {
     flex: 1 1 auto;
     order: 2;
     background: #ffc94e;
-    display: flex;
+   display: flex;
     flex-direction: column;
 }
 
+
 .content-header {
     flex: 0 0 50px;
-    background: lightyellow;
+    font-size: 16px;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #eee;
+    border-bottom: 1px solid #222;
+    background: #2a2a2a;
 }
 .content {
     flex: 1;
     overflow:auto;
 }
+
+.button {
+    cursor: pointer;
+}
+
+.button:before {
+
+    content: '\f0c9';
+    font: 42px fontawesome;
+}
 .nav-wrapper, .sidebar-wrapper{
     /* 12em is the width of the columns */
     flex: 0 0 10em;
-    background: #c9ea5d;
     display: flex;
     flex-direction: column;
 }
 .nav-wrapper{
     order: 1;
+    transition: flex 1s
+    /*transition: transform 0.5s,flex 0.5s;*/
+    /*transform: translate3d(0, 0, 0);*/
+}
+.nav-wrapper.isOpen{
+    /*transform: translate3d(-161px, 0, 0);*/
+    flex: 0 0 0;
 }
 .sidebar-wrapper{
     order: 3;
+
 }
 .nav-header, .sidebar-header {
     flex: 0 0 50px;
-    background: lightyellow;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #eee;
+    border-bottom: 1px solid #222;
+    background: #2a2a2a;
 }
 
 .nav-content, .sidebar-content{
     flex: 1;
     overflow:auto;
+    color: white;
+}
+.nav li a {
+    position: relative;
+    display: block;
+    padding: 15px 15px 15px 50px;
+    font-size: 12px;
+    color: #eee;
+    border-bottom: 1px solid #222;
 }
 
+.nav li a:before {
+    font: 14px fontawesome;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+
+.nav li:nth-child(1) a:before {
+    content: '\f00a';
+}
+
+.nav li:nth-child(2) a:before {
+    content: '\f012';
+}
+
+.nav li:nth-child(3) a:before {
+    content: '\f0e8';
+}
+
+.nav li:nth-child(4) a:before {
+    content: '\f0c3';
+}
+
+.nav li:nth-child(5) a:before {
+    content: '\f022';
+}
+
+.nav li:nth-child(6) a:before {
+    content: '\f115';
+}
+
+.nav li:nth-child(7) a:before {
+    content: '\f085';
+}
+
+.nav li:nth-child(8) a:before {
+    content: '\f023';
+    left: 23px;
+}
+
+.nav li a:hover {
+    background: #444;
+}
+
+.nav li a.active {
+    box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
+    background: #444;
+}
+ul{
+    list-style: none;
+}
 header {
     background: #92e4c9;
     height: 50px;
@@ -67,6 +166,7 @@ header {
 footer {
     background: #f7846a;
     height: 50px;
+
 }
 
 * {
