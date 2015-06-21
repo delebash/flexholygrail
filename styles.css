@@ -13,7 +13,6 @@ html, body {
     box-sizing: inherit;
 }
 
-
 .holy-grail {
     display: flex;
     flex-direction: column;
@@ -32,10 +31,9 @@ html, body {
     flex: 1 1 auto;
     order: 2;
     background: #ffc94e;
-   display: flex;
+    display: flex;
     flex-direction: column;
 }
-
 
 .content-header {
     flex: 0 0 50px;
@@ -47,9 +45,10 @@ html, body {
     border-bottom: 1px solid #222;
     background: #2a2a2a;
 }
+
 .content {
     flex: 1;
-    overflow:auto;
+    overflow: auto;
 }
 
 .button {
@@ -57,30 +56,34 @@ html, body {
 }
 
 .button:before {
-
     content: '\f0c9';
     font: 42px fontawesome;
 }
-.nav-wrapper, .sidebar-wrapper{
+
+.nav-wrapper, .sidebar-wrapper {
     /* 12em is the width of the columns */
     flex: 0 0 10em;
     display: flex;
     flex-direction: column;
 }
-.nav-wrapper{
+
+.nav-wrapper {
     order: 1;
     transition: flex 1s
     /*transition: transform 0.5s,flex 0.5s;*/
     /*transform: translate3d(0, 0, 0);*/
 }
-.nav-wrapper.isOpen{
+
+.nav-wrapper.isOpen {
     /*transform: translate3d(-161px, 0, 0);*/
     flex: 0 0 0;
 }
-.sidebar-wrapper{
+
+.sidebar-wrapper {
     order: 3;
 
 }
+
 .nav-header, .sidebar-header {
     flex: 0 0 50px;
     font-size: 16px;
@@ -93,11 +96,12 @@ html, body {
     background: #2a2a2a;
 }
 
-.nav-content, .sidebar-content{
+.nav-content, .sidebar-content {
     flex: 1;
-    overflow:auto;
+    overflow: auto;
     color: white;
 }
+
 .nav li a {
     position: relative;
     display: block;
@@ -155,9 +159,11 @@ html, body {
     box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
     background: #444;
 }
-ul{
+
+ul {
     list-style: none;
 }
+
 header {
     background: #92e4c9;
     height: 50px;
