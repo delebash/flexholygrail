@@ -13,12 +13,12 @@ html, body {
     box-sizing: inherit;
 }
 
-.holy-grail {
+.body {
     display: flex;
     flex-direction: column;
 }
 
-.body {
+.wrapper {
     flex: 1;
     display: flex;
     flex-direction: row;
